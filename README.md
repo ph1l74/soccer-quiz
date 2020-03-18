@@ -15,7 +15,7 @@ Yeah, you have to install:
 
 First of all you need to build a frontend application:<br />
 1. Change directory in terminal to **src-frontend**
-2. Run `npm install`*****.
+2. Run `npm install`*.
 3. Run `npm run build`.
 4. A `build` folder should appear.
 
@@ -26,7 +26,7 @@ The second step is a backend-server installation:
   * MacOS / Unix : `source ./bin/activate` 
   * Windows: `.\Scripts\activate`
 4. Install **pipenv** packet: `pip instal pipenv`.
-5. Run `pipenv install`******.
+5. Run `pipenv install`**.
 
 
 *Look at Necessaries, 3 </br>
