@@ -25,3 +25,10 @@ export function addData(value) {
         value
     }
 }
+
+export function addAnswer(value) {
+    return {
+        type: types.ADD_ANSWER,
+        value
+    }
+}

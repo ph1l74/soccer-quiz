@@ -5,7 +5,13 @@ import { createStore } from 'redux';
 import rootReducer from './Reducers';
 import './App.css';
 
-const store = createStore(rootReducer, { questions: [], isLoading: false, curQuestion: 0 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const initState = {
+  questions: [],
+  isLoading: false,
+  curQuestion: 0,
+  answers: []
+}
+const store = createStore(rootReducer, initState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 function App() {
 

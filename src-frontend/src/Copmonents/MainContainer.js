@@ -18,7 +18,6 @@ function MainContainer() {
             const res = await axios("http://localhost:80/api/coef");
             dispatch(addData(res.data));
             dispatch(stopLoading());
-            console.log(getQuestions)
         };
 
         fetchData();

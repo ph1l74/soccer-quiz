@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Answer from './Answer'
 import './Card.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { nextQuestion } from '../Actions';
+import { nextQuestion, addAnswer } from '../Actions';
 
-const Card = ({ questionData, curNum, num, setCurNum }) => {
+const Card = ({ questionData, num }) => {
 
     const [isVisible, setisVisible] = useState(false);
     const curQuestion = useSelector(state => state.curQuestion);
@@ -15,7 +15,9 @@ const Card = ({ questionData, curNum, num, setCurNum }) => {
     })
 
     const handleClick = (e) => {
+        const answerNumber = e.target.getAttribute("data-num")
         dispatch(nextQuestion(curQuestion + 1));
+        dispatch(addAnswer(questionData.answers[answerNumber]))
     }
 
     return (
@@ -31,7 +33,7 @@ const Card = ({ questionData, curNum, num, setCurNum }) => {
                 </div>
             </div>
             {questionData.answers.map((a, i) => {
-                return <Answer answerText={a} clickHandler={handleClick} key={`answer_${i}`}></Answer>
+                return <Answer answerText={a} clickHandler={handleClick} key={`answer_${i}`} answerNumber={i}></Answer>
             })}
         </div>
     )
