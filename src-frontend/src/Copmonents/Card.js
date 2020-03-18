@@ -7,15 +7,15 @@ import { nextQuestion } from '../Actions';
 const Card = ({ questionData, curNum, num, setCurNum }) => {
 
     const [isVisible, setisVisible] = useState(false);
-    const countQuestion = useSelector(state => state.countQuestion);
+    const curQuestion = useSelector(state => state.curQuestion);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        countQuestion === num ? setisVisible(true) : setisVisible(false)
+        curQuestion === num ? setisVisible(true) : setisVisible(false)
     })
 
     const handleClick = (e) => {
-        dispatch(nextQuestion(countQuestion + 1));
+        dispatch(nextQuestion(curQuestion + 1));
     }
 
     return (
