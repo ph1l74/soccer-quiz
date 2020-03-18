@@ -1,0 +1,30 @@
+body {
+    font-family: 'Bellota Text', cursive;
+    /* font-family: 'Roboto Slab', serif; */
+}
+
+.sq-content {
+    margin: 0;
+}
+
+.is-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.sq-gradiented {
+    background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+
+.sq-answer {
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sq-answer:hover {
+    transform: scale(1.2);
+}
+
+.sq-answer:active {
+    transform: scale(0.9);
+}
