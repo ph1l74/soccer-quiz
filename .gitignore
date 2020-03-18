@@ -3,7 +3,6 @@
 /.vscode
 /venv
 /src-frontend/node_modules
-/src-frontend/public
 /src-frontend/build
 /src-frontend/coverage
 
