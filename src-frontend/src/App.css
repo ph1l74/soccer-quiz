@@ -12,6 +12,27 @@ body {
   pointer-events: none;
 }
 
+.sq-results {
+  animation: makeVisible 0.5s 1 ease-in-out;
+}
+
+.sq-result-answers>span, .sq-result-answer-text, .sq-result-answer-coef {
+  display: inline;
+  margin: 10px;
+}
+
+.sq-result-aftertext {
+  padding: 16px;
+}
+
+.sq-result {
+  border: 2px solid white;
+  border-radius: 6px;
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
 .sq-loader {
   position: relative;
   display: flex;
@@ -57,5 +78,18 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes makeVisible {
+  0% {
+    display: block;
+    visibility: visible;
+    opacity: 0;
+    top: -10vh
+  }
+  100% {
+    opacity: 1;
+    top: 0;
   }
 }
