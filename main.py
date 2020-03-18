@@ -4,7 +4,7 @@ from flask_cors import CORS
 import files_parser
 
 
-app = Flask(__name__, static_url_path='/')
+app = Flask(__name__, static_url_path='/', static_folder='src-frontend/build')
 flask_api = Api(app)
 CORS(app)
 
