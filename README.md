@@ -15,15 +15,21 @@ Yeah, you have to install:
 
 First of all you need to build a frontend application:<br />
 1. Change directory in terminal to **src-frontend**
-2. Run `npm install`*
-3. Run `npm run build`
+2. Run `npm install`*****.
+3. Run `npm run build`.
 4. A `build` folder should appear.
 
 The second step is a backend-server installation:
 1. Open terminal in project root directory.
-2. Run `pipenv install`**.
+2. Install Python environment in directory: `python -m venv`.
+3. Activate environment: 
+  * MacOS / Unix : `source ./bin/activate` 
+  * Windows: `.\Scripts\activate`
+4. Install **pipenv** packet: `pip instal pipenv`.
+5. Run `pipenv install`******.
 
-*Look at Necessaries, 3 
+
+*Look at Necessaries, 3 </br>
 **Look at Necessaries, 1 and 2
 
 ## How can I run it?
