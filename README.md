@@ -21,7 +21,7 @@ First of all you need to build a frontend application:<br />
 
 The second step is a backend-server installation:
 1. Open terminal in project root directory.
-2. Install Python environment in directory: `python -m venv`.
+2. Install Python environment in directory: `python -m venv .`.
 3. Activate environment: 
   * MacOS / Unix : `source ./bin/activate` 
   * Windows: `.\Scripts\activate`
