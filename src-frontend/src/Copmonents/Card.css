@@ -30,6 +30,16 @@
     opacity: 1; */
 }
 
+.sq-card-cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+}
+
 @keyframes makeVisible {
     0% {
         display: block;

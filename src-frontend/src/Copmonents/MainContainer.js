@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Card from './Card';
 import { startLoading, addData, stopLoading } from '../Actions';
-import axios from 'axios';
 
 
 function MainContainer() {
@@ -17,9 +16,14 @@ function MainContainer() {
 
         const fetchData = async () => {
             dispatch(startLoading());
-            const res = await axios("/api/coef");
-            dispatch(addData(res.data));
-            dispatch(stopLoading());
+            const res = await fetch("/data/data.json")
+                .then((res) => res.json())
+                .then((data) => {
+                    dispatch(addData(data));
+                })
+                .then(() => {
+                    dispatch(stopLoading());
+                });
         };
 
         fetchData();

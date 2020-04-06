@@ -24,7 +24,7 @@ const Card = ({ questionData, num }) => {
         <div className={`card sq-card ${isVisible ? "sq-visible" : "sq-invisible"}`}>
             <div className="card-image">
                 <figure className="image is-16by9">
-                    <img src={questionData.img ? questionData.img : "https://s.ill.in.ua/i/news/630x373/404/404915.jpg"} />
+                    <div className="sq-card-cover" style={{ backgroundImage:  questionData.img ? `url(${questionData.img})` : `url(https://s.ill.in.ua/i/news/630x373/404/404915.jpg)` }} ></div>
                 </figure>
                 <div className="card-content is-overlay is-vertical-center is-horisontal-center sq-gradiented">
                     <div className="content has-text-centered">
