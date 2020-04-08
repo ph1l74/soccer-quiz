@@ -4,8 +4,9 @@ import Card from './Card';
 import { startLoading, addData, stopLoading } from '../Actions';
 
 
-function MainContainer() {
-    const getQuestions = useSelector(state => state.questions);
+function MainContainer({ rubricPath }) {
+
+    const getQuizData = useSelector(state => state.rubrics.filter((r) => r.path === rubricPath)[0]);
     const getAnswers = useSelector(state => state.answers);
     const curQuestion = useSelector(state => state.curQuestion);
     const isLoading = useSelector(state => state.isLoading);
@@ -55,14 +56,14 @@ function MainContainer() {
                         <div id="contentArea" className="container has-text-centered">
                             <div className="columns is-centered">
                                 {
-                                    getQuestions && getQuestions.length > 0 ? (
+                                    getQuizData && getQuizData.questions.length > 0 ? (
                                         <div
                                             className="column is-one-column-mobile is-two-thirds-tablet is-half-desktop is-half-widescreen is-half-fullhd">
-                                            {getQuestions.map((q, i) => {
+                                            {getQuizData.questions.map((q, i) => {
                                                 return <Card questionData={q} key={`card_${i}`} num={i}></Card>
                                             })}
                                             {
-                                                curQuestion === getQuestions.length ?
+                                                curQuestion === getQuizData.questions.length ?
                                                     (
                                                         <div className="sq-results">
                                                             <div className="sq-results-header is-size-3">Молодец!</div>
@@ -72,11 +73,11 @@ function MainContainer() {
                                                                 <div className="sq-result-answer is-size-4">
                                                                     <div className="sq-result-answer-text">{a}</div>
                                                                     <span>—</span>
-                                                                    <div className="sq-result-answer-coef">Коэф. {getQuestions[i].coef}</div>
+                                                                    <div className="sq-result-answer-coef">Коэф. {getQuizData.questions[i].coef}</div>
                                                                 </div>
                                                             ))}
-                                                            <div className="sq-result-aftertext is-size-5">Задепозить 1000, получишь бонус ещё 1000₽. В итоге поставив 1000₽ на победу Барселоны получишь 2300₽!</div>
-                                                            <a className="button is-rounded" href="http://ph1l74.com/">ЗАДЕПОЗИТИТЬ</a>
+                                                            <div className="sq-result-aftertext is-size-5">{getQuizData.footerText }</div>
+                                                            <a className="button is-rounded" href={getQuizData.buttonURL}>{getQuizData.buttonText}</a>
                                                         </div>
                                                     )
                                                     : (null)

@@ -1,6 +1,6 @@
 import * as types from '../Constants';
 
-const rootReducer = (state = { questions: [], isLoading: false, curQuestion: 0, answers: []}, action) => {
+const rootReducer = (state = { rubrics: [], isLoading: false, curQuestion: 0, answers: [] }, action) => {
     switch (action.type) {
         case types.NEXT_QUESTION:
             return { ...state, curQuestion: action.value }
@@ -9,7 +9,7 @@ const rootReducer = (state = { questions: [], isLoading: false, curQuestion: 0, 
         case types.STOP_LOADING:
             return { ...state, isLoading: false };
         case types.ADD_DATA:
-            return { ...state, questions: action.value }
+            return { ...state, rubrics: action.value }
         case types.ADD_ANSWER:
             const newAnswers = state.answers;
             newAnswers.push(action.value)

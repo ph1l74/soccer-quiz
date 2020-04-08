@@ -1,29 +1,107 @@
 [
   {
-    "answers": [
-      "Привет",
-      "Пока"
+    "path": "hui",
+    "questions": [
+      {
+        "answers": [
+          "Привет",
+          "Пока"
+        ],
+        "coef": "3",
+        "img": "img/football.jpg",
+        "text": "Тест 1"
+      },
+      {
+        "answers": [
+          "Норм",
+          "Хорошо"
+        ],
+        "coef": "12",
+        "img": "https://sun9-45.userapi.com/c849136/v849136778/3a8a4/j96SRZnYMfo.jpg",
+        "text": "Тест 2"
+      },
+      {
+        "answers": [
+          "В кофейне",
+          "Отдыхаю"
+        ],
+        "coef": "2",
+        "img": "https://sun9-21.userapi.com/c847216/v847216829/5ccbb/I4J4c3nmxcw.jpg",
+        "text": "Тест 3"
+      }
     ],
-    "coef": "3",
-    "img": "https://sun9-22.userapi.com/c858324/v858324429/6e8c8/ogzzDroGvI0.jpg",
-    "text": "Привет, Оля"
+    "buttonText": "Задепозитить", 
+    "buttonURL" : "http://ph1l74.com",
+    "footerText": "Задепозить 1000, получишь бонус ещё 1000₽. В итоге поставив 1000₽ на победу Барселоны получишь 2300₽!"
   },
   {
-    "answers": [
-      "Норм",
-      "Хорошо"
+    "path": "hui2",
+    "questions": [
+      {
+        "answers": [
+          "Привет",
+          "Пока"
+        ],
+        "coef": "3",
+        "img": "https://sun9-22.userapi.com/c858324/v858324429/6e8c8/ogzzDroGvI0.jpg",
+        "text": "Привет, Оля"
+      },
+      {
+        "answers": [
+          "Норм",
+          "Хорошо"
+        ],
+        "coef": "12",
+        "img": "https://sun9-45.userapi.com/c849136/v849136778/3a8a4/j96SRZnYMfo.jpg",
+        "text": "Как дела, Оля?"
+      },
+      {
+        "answers": [
+          "В кофейне",
+          "Отдыхаю"
+        ],
+        "coef": "2",
+        "img": "https://sun9-21.userapi.com/c847216/v847216829/5ccbb/I4J4c3nmxcw.jpg",
+        "text": "Че делаешь, Оля?"
+      }
     ],
-    "coef": "12",
-    "img": "https://sun9-45.userapi.com/c849136/v849136778/3a8a4/j96SRZnYMfo.jpg",
-    "text": "Как дела, Оля?"
+    "buttonText": "Википедия", 
+    "buttonURL" : "http://ru.wikipedia.org",
+    "footerText": "А вот ссылка не википедию, умник:"
   },
   {
-    "answers": [
-      "В кофейне",
-      "Отдыхаю"
+    "path": "hui3",
+    "questions": [
+      {
+        "answers": [
+          "Привет",
+          "Пока"
+        ],
+        "coef": "3",
+        "img": "https://sun9-22.userapi.com/c858324/v858324429/6e8c8/ogzzDroGvI0.jpg",
+        "text": "Привет, Оля"
+      },
+      {
+        "answers": [
+          "Норм",
+          "Хорошо"
+        ],
+        "coef": "12",
+        "img": "https://sun9-45.userapi.com/c849136/v849136778/3a8a4/j96SRZnYMfo.jpg",
+        "text": "Как дела, Оля?"
+      },
+      {
+        "answers": [
+          "В кофейне",
+          "Отдыхаю"
+        ],
+        "coef": "2",
+        "img": "https://sun9-21.userapi.com/c847216/v847216829/5ccbb/I4J4c3nmxcw.jpg",
+        "text": "Че делаешь, Оля?"
+      }
     ],
-    "coef": "2",
-    "img": "https://sun9-21.userapi.com/c847216/v847216829/5ccbb/I4J4c3nmxcw.jpg",
-    "text": "Че делаешь, Оля?"
+    "buttonText": "Яндекс", 
+    "buttonURL" : "http://ya.ru",
+    "footerText": "Мог бы и в Яндексе поискать правильные ответы!"
   }
 ]
