@@ -46,7 +46,7 @@ function MainContainer({ rubricPath }) {
                             <div className="container is-centered">
                                 <div className="navbar-brand">
                                     <a className="navbar-item" href="#">
-                                        <img src="img/logo.png" alt="Logo" />
+                                        <img src="/img/logo.png" alt="Logo" />
                                     </a>
                                 </div>
                             </div>

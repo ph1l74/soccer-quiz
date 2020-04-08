@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import MainContainer from './Copmonents/MainContainer';
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { Route, BrowserRouter } from 'react-router-dom'
 import rootReducer from './Reducers';
 import './App.css';
+import NonContainer from './Copmonents/NONContainer';
 
 const initState = {
   rubrics: [],
@@ -25,8 +26,8 @@ function App() {
         .then((res) => res.json())
         .then((data) => {
           setRubrics(data);
+          console.log(data);
         })
-
     };
     fetchData();
   }, []);
@@ -34,7 +35,7 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Route path="/" exact component={() => <MainContainer rubricPath={"hui"} />}></Route>
+        <Route path="/" exact component={() => (rubrics[0] ? <MainContainer rubricPath={rubrics[0].path} /> : null)}></Route>
         {rubrics.map((r, i) => (
           <Route
             path={"/" + r.path}
@@ -44,7 +45,7 @@ function App() {
             key={"rub_" + i}
           />
         ))}
-        <div></div>
+        <Route path="*" exact component={NonContainer}></Route>
       </BrowserRouter >
     </Provider>
   );
