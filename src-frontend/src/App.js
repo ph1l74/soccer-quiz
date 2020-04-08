@@ -35,7 +35,7 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Route path="/" exact component={() => (rubrics[0] ? <MainContainer rubricPath={rubrics[0].path} /> : null)}></Route>
+        <Route path="/" exact component={() => (<MainContainer rubricPath={rubrics[0] ? rubrics[0].path : null} />)}></Route>
         {rubrics.map((r, i) => (
           <Route
             path={"/" + r.path}
@@ -45,7 +45,7 @@ function App() {
             key={"rub_" + i}
           />
         ))}
-        <Route path="*" exact component={NonContainer}></Route>
+        <Route path="*" component={NonContainer}></Route>
       </BrowserRouter >
     </Provider>
   );
