@@ -28,7 +28,7 @@ function MainContainer({ rubricPath }) {
         };
 
         fetchData();
-    });
+    }, []);
 
     return (
         <div className="main">
