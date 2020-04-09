@@ -37,7 +37,7 @@ function App() {
       <BrowserRouter>
         <Switch>
 
-          <Route path="/" exact component={() => (<MainContainer rubricPath={rubrics[0] ? rubrics[0].path : null} />)}></Route>
+          <Route exact path="/" exact component={() => (<MainContainer rubricPath={rubrics[0] ? rubrics[0].path : null} />)}></Route>
           {rubrics.map((r, i) => (
             <Route
               exact path={"/" + r.path}
