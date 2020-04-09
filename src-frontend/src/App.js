@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MainContainer from './Copmonents/MainContainer';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { Route, BrowserRouter } from 'react-router-dom'
+import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import rootReducer from './Reducers';
 import './App.css';
 import NonContainer from './Copmonents/NONContainer';
@@ -35,17 +35,20 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Route path="/" exact component={() => (<MainContainer rubricPath={rubrics[0] ? rubrics[0].path : null} />)}></Route>
-        {rubrics.map((r, i) => (
-          <Route
-            path={"/" + r.path}
-            exact component={
-              () => <MainContainer rubricPath={r.path} />
-            }
-            key={"rub_" + i}
-          />
-        ))}
-        <Route path="*" component={NonContainer}></Route>
+        <Switch>
+
+          <Route path="/" exact component={() => (<MainContainer rubricPath={rubrics[0] ? rubrics[0].path : null} />)}></Route>
+          {rubrics.map((r, i) => (
+            <Route
+              exact path={"/" + r.path}
+              exact component={
+                () => <MainContainer rubricPath={r.path} />
+              }
+              key={"rub_" + i}
+            />
+          ))}
+          <Route path="*" component={NonContainer}></Route>
+        </Switch>
       </BrowserRouter >
     </Provider>
   );
